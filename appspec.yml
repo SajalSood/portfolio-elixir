@@ -1,0 +1,21 @@
+ersion: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/portfolio/
+hooks:
+  BeforeInstall:
+    - location: scripts/beforeinstall
+      timeout: 300
+      runas: root
+    - location: scripts/bootstrap_ec2
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: scripts/applicationstart
+      timeout: 180
+      runas: root
+  ApplicationStop:
+    - location: scripts/applicationstop
+      timeout: 300
+      runas: root
