@@ -11,6 +11,6 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 nvm install v13
 cd /var/www/portfolio/
 sudo mix deps.get
-sudo yes Y | mix compile
+yes Y | sudo mix compile
 sudo mix release.init
 sudo mix release
