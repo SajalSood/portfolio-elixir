@@ -10,7 +10,7 @@ echo "[Service]" >> /etc/systemd/system/portfolio.service
 echo "User=root" >> /etc/systemd/system/portfolio.service
 echo "Environment=PORT=80" >> /etc/systemd/system/portfolio.service
 echo "WorkingDirectory=/var/www/portfolio/" >> /etc/systemd/system/portfolio.service
-echo "ExecStart=/var/www/portfolio/_build/dev/rel/personal_site/bin/personal_site start" >> /etc/systemd/system/portfolio.service
+echo "ExecStart=/var/www/portfolio/_build/dev/rel/personal_site/bin/personal_site daemon" >> /etc/systemd/system/portfolio.service
 echo "[Install]" >> /etc/systemd/system/portfolio.service
 echo "WantedBy=multi-user.target" >> /etc/systemd/system/portfolio.service
 systemctl daemon-reload

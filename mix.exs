@@ -20,8 +20,7 @@ defmodule PersonalSite.MixFile do
   defp deps do
     [
       {:serum, "~> 1.4"},
-      {:serum_theme_essence, "~> 1.0"},
-      {:distillery, "~> 2.0"}
+      {:serum_theme_essence, "~> 1.0"}
     ]
   end
 end
